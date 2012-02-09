@@ -1,0 +1,126 @@
+body{
+	background-color: #333232;
+	/*background-color:#201c1f;*/	
+}
+/*-------------
+ Header
+ -------------- */
+div.header{
+	border-bottom: solid 4px #00A5FF;
+}
+/* -------
+ Main zone
+ ---------- */
+
+/*------------
+Hiding areas
+---------------*/
+.header-menu, .chatbox, .chat-field{
+	
+}
+/*------------
+Login title
+--------------*/
+div.login_title{
+	margin-top: 25%;
+}
+div.login_title h1{
+	font-family: arial,sans-sherif;
+	color: #0bb5d9;
+	font-size: 1.9em;
+	font-weight: bold;
+}
+/*-----------
+Login form
+-------------*/
+
+div.login_form{
+	padding: 10px 10px 10px 10px;
+	min-height: 150px;
+	background-color: white;
+	-moz-border-radius: 31px;
+	-webkit-border-radius: 31px;
+	border-radius: 31px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	-moz-box-shadow: 0px 0px 13px #000000;
+	-webkit-box-shadow: 0px 0px 13px #000000;
+	box-shadow: 0px 0px 13px #000000;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+
+}
+
+div.login_form form{
+	padding-top: 20px;
+	margin-left: 10%;
+}
+
+div.login_form input{
+	float: left;
+	margin: 5px 5px 10px 0px;
+}
+
+ul.right-menu{
+	background-color: transparent;
+}
+/*-----------
+Chat zone
+-------------*/
+#log{
+	margin-top: 6%;
+}
+::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+
+div.chatbox{
+	
+	-moz-border-radius: 14px;
+	-webkit-border-radius: 14px;
+	border-radius: 14px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	-moz-box-shadow: 0px 0px 7px #000000;
+	-webkit-box-shadow: 0px 0px 7px #000000;
+	box-shadow: 0px 0px 7px #000000;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+	opacity: 0.59;
+	-ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity = 59);
+	/*-ms-filter must come before filter*/
+	filter: alpha(opacity = 59);
+	
+	padding: 5px 10px 5px 20px;
+	overflow-y: auto;
+	
+}
+
+div.chatbox p{
+	font-size: 1.2em;
+	color: black
+	
+}
+.desktopbox{
+	margin-top: 5%;
+	height: 400px;
+	background: white;
+}
+
+div.chat-field{
+	background-color: #12f40c;
+	border-width: 2px;
+	border-color: #999999;
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	border-radius: 13px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	padding: 10px 12px 15px 12px;
+}
+div.chat-field input{
+	width: 80%;
+	margin: auto;
+}
+
+div.chat-field h5{
+	float: left;
+	padding-right: 10px;
+}

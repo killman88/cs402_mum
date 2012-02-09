@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <link rel="stylesheet" media="screen" href="css/styles.css" />
+  <link rel="stylesheet" media="screen" href="css/bootstrap.css" />
+  <link rel="stylesheet" media="screen" href="css/bootstrap-responsive.css" />
+  <!-- Script -->
+
+</head>
+<body>
+
+<!-- Document -->
+	<!-- Header -->
+	<div class="navbar header navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#">MuM Project!</a>
+						<div class="header-menu">
+							<ul class="nav pull-right">
+								<li class="dropdown">
+									  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-home icon-white"></i> My Profile <b class="caret"></b></a>
+									  <ul class="dropdown-menu">
+										    <li><a href="#"><i class="icon-info-sign"></i> My infos</a></li>
+										    <li><a data-toggle="modal" href="#e-form"><i class="icon-envelope"></i> Buddy E-mailer</a>
+										    <li class="divider"></li>
+										    <li><a id="exit" href="#"><i class="icon-off"></i> Disconnect</a></li>
+									  </ul>
+								</li>
+							</ul>
+						</div>
+				</div>
+			</div>
+	</div>
+	<!-- Main page-->
+<section class="grid-system">
+<div class="container">
+	<div class="row">
+			<div id="login" class="span6 offset3">
+				<div class="login_title">
+					<h1>Please login to MuM !</h1>
+				</div>
+				<div class="login_form">
+					<form method="post" action="">
+						<label for="username">Username : </label><input id="nickInput" type="text" class="span4" name="nickInput" /><a href="#" id="connectButton" class="btn btn-primary btn-large">Join</a>				
+					
+					</form>
+				</div>
+			</div>
+	</div>
+	<!-- DISPLAY CHAT MESSAGES-->
+	<div class="row">
+		<div id="log" class="span8 offset2">
+			<div class="chatbox desktopbox">
+				<p>Lorem ipsum dolor sit amet, ne reque reprimique pro, an mei tollit tamquam, graeco ponderum vix ut. Quis malis ex mei. Cum audire explicari accusamus ex, liber fierent qualisque qui ne. Pericula principes liberavisse pri ex, est ut putant scriptorem. Pro ut vidisse luptatum. Te eum agam salutandi.</p>
+				<p>Lorem ipsum dolor sit amet, ne reque reprimique pro, an mei tollit tamquam, graeco ponderum vix ut. Quis malis ex mei. Cum audire explicari accusamus ex, liber fierent qualisque qui ne. Pericula principes liberavisse pri ex, est ut putant scriptorem. Pro ut vidisse luptatum. Te eum agam salutandi.</p>
+				<p>Lorem ipsum dolor sit amet, ne reque reprimique pro, an mei tollit tamquam, graeco ponderum vix ut. Quis malis ex mei. Cum audire explicari accusamus ex, liber fierent qualisque qui ne. Pericula principes liberavisse pri ex, est ut putant scriptorem. Pro ut vidisse luptatum. Te eum agam salutandi.</p>
+				<p>Lorem ipsum dolor sit amet, ne reque reprimique pro, an mei tollit tamquam, graeco ponderum vix ut. Quis malis ex mei. Cum audire explicari accusamus ex, liber fierent qualisque qui ne. Pericula principes liberavisse pri ex, est ut putant scriptorem. Pro ut vidisse luptatum. Te eum agam salutandi.</p>
+				<p>Lorem ipsum dolor sit amet, ne reque reprimique pro, an mei tollit tamquam, graeco ponderum vix ut. Quis malis ex mei. Cum audire explicari accusamus ex, liber fierent qualisque qui ne. Pericula principes liberavisse pri ex, est ut putant scriptorem. Pro ut vidisse luptatum. Te eum agam salutandi.</p>
+				<p>Lorem ipsum dolor sit amet, ne reque reprimique pro, an mei tollit tamquam, graeco ponderum vix ut. Quis malis ex mei. Cum audire explicari accusamus ex, liber fierent qualisque qui ne. Pericula principes liberavisse pri ex, est ut putant scriptorem. Pro ut vidisse luptatum. Te eum agam salutandi.</p>
+				<p>Lorem ipsum dolor sit amet, ne reque reprimique pro, an mei tollit tamquam, graeco ponderum vix ut. Quis malis ex mei. Cum audire explicari accusamus ex, liber fierent qualisque qui ne. Pericula principes liberavisse pri ex, est ut putant scriptorem. Pro ut vidisse luptatum. Te eum agam salutandi.</p>
+				<p>Lorem ipsum dolor sit amet, ne reque reprimique pro, an mei tollit tamquam, graeco ponderum vix ut. Quis malis ex mei. Cum audire explicari accusamus ex, liber fierent qualisque qui ne. Pericula principes liberavisse pri ex, est ut putant scriptorem. Pro ut vidisse luptatum. Te eum agam salutandi.</p>
+				<p>Lorem ipsum dolor sit amet, ne reque reprimique pro, an mei tollit tamquam, graeco ponderum vix ut. Quis malis ex mei. Cum audire explicari accusamus ex, liber fierent qualisque qui ne. Pericula principes liberavisse pri ex, est ut putant scriptorem. Pro ut vidisse luptatum. Te eum agam salutandi.</p>
+			</div>
+			<div class="chat-field">
+				<fieldset>
+					<h5><a id="usersLink" style="text-decoration: none;" href="#">5 users</a></h5><h5>Uptime: <span id="uptime">?</span></h5><h5>Memory: <span id="rss">?</span>mb RSS</h5>
+					<input tabindex="1" id="entry" type="text" class="input-text" />
+				</fieldset>
+			</div>	
+		
+		</div>
+	</div>
+</div>
+	<!-- Buddy mailer modal -->
+	<div id="e-form" class="modal hide fade">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">&#215;</a>
+			<h2>E-mail a friend</h2>
+		</div>
+		<div class="modal-body">
+			<form action="#" class="">
+				<div class="input-prepend">
+					<label>Recipient: </label>
+					<span class="add-on">@</span><input type="text" class="span3" name="toInput" id="toInput" />
+				</div>
+				<label>Sender: </label>
+				<div class="input-prepend">
+					<span class="add-on">@</span><input type="text" class="span3" name="fromInput" id="fromInput" /><br />
+					<textarea class="input-xlarge">Please write your message!</textarea>
+				</div>
+			
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-primary right">Send mail!</a>
+		</div>
+	</div>	
+</div>
+</system>
+ <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/client.js"></script>
+    <script src="js/prettify.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    
+    <script type="text/javascript">
+		/*
+		$(document).ready(function(){
+			 $("a:contains('Join')").click(function(){
+			 	$(".header-menu").show();
+			 	$("#login").hide();
+			 	$(".chatbox,.chat-field").show();
+			 	
+			 	
+			 });
+			 
+			$("#exit").click(function(){
+				$(".header-menu").hide();
+				$(".chatbox,.chat-field").hide();
+			 	$("#login").show();
+			 	
+			}); 
+		});
+		*/
+    </script>
+</body>
+</html>
