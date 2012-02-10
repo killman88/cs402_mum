@@ -86,18 +86,18 @@
 			<form action="#" class="">
 				<div class="input-prepend">
 					<label>Recipient: </label>
-					<span class="add-on">@</span><input type="text" class="span3" name="toInput" id="toInput" />
+					<span class="add-on">@</span><input type="text" class="span3" name="toInput" id="toInput" value="" />
 				</div>
 				<label>Sender: </label>
 				<div class="input-prepend">
-					<span class="add-on">@</span><input type="text" class="span3" name="fromInput" id="fromInput" /><br />
-					<textarea class="input-xlarge">Please write your message!</textarea>
+					<span class="add-on">@</span><input type="text" class="span3" name="fromInput" id="fromInput" value="" /><br />
+					<textarea id="bodyInput" class="input-xlarge tinymce">Please write your message!</textarea>
 				</div>
 			
 			</form>
 		</div>
 		<div class="modal-footer">
-			<a href="#" class="btn btn-primary right">Send mail!</a>
+			<a href="#" id="emailButton" class="btn btn-primary right" value="Send">Send mail!</a>
 		</div>
 	</div>	
 </div>
@@ -112,7 +112,8 @@
     <script src="js/bootstrap-dropdown.js"></script>
     <script src="js/bootstrap-modal.js"></script>
     <script src="js/bootstrap-transition.js"></script>
-    
+    <script type="text/javascript" src="js/tiny_mce/jquery.tinymce.js"></script>
+    <script type="text/javascript" src="js/tiny_mce/tiny_mce.js"></script>
     <script type="text/javascript">
 		/*
 		$(document).ready(function(){
@@ -132,6 +133,18 @@
 			}); 
 		});
 		*/
+//TinyMCE jQuery plugin
+$(document).ready(function() {
+                $('textarea.tinymce').tinymce({
+                        // Location of TinyMCE script
+                        script_url : 'js/tiny_mce/tiny_mce.js',
+
+                        // General options
+                        theme : "simple",
+                        // Theme options
+              
+                });
+        });
     </script>
 </body>
 </html>

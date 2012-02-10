@@ -155,10 +155,19 @@ fu.get("/js/prettify.js", fu.staticHandler("js/prettify.js"));
 fu.get("/js/bootstrap-dropdown.js", fu.staticHandler("js/bootstrap-dropdown.js"));
 fu.get("/js/bootstrap-modal.js", fu.staticHandler("js/bootstrap-modal.js"));
 fu.get("/js/bootstrap-transition.js", fu.staticHandler("js/bootstrap-transition.js"));
+
+fu.get("/js/tiny_mce/themes/simple/skins/default/ui.css", fu.staticHandler("js/tiny_mce/themes/simple/skins/default/ui.css"));
+fu.get("/js/tiny_mce/themes/simple/skins/default/content.css", fu.staticHandler("js/tiny_mce/themes/simple/skins/default/content.css"));
+fu.get("/js/tiny_mce/themes/simple/img/icons.gif", fu.staticHandler("js/tiny_mce/themes/simple/img/icons.gif"));
+fu.get("/js/tiny_mce/jquery.tinymce.js", fu.staticHandler("js/tiny_mce/jquery.tinymce.js"));
+fu.get("/js/tiny_mce/tiny_mce.js", fu.staticHandler("js/tiny_mce/tiny_mce.js"));
+fu.get("/js/tiny_mce/themes/simple/langs/en.js", fu.staticHandler("js/tiny_mce/themes/simple/langs/en.js"));
+fu.get("/js/tiny_mce/langs/en.js", fu.staticHandler("js/tiny_mce/langs/en.js"));
+fu.get("/js/tiny_mce/themes/simple/editor_template.js", fu.staticHandler("js/tiny_mce/themes/simple/editor_template.js"));
+
+
 fu.get("/img/glyphicons-halflings.png", fu.staticHandler("img/glyphicons-halflings.png"));
 fu.get("/img/glyphicons-halflings-white.png", fu.staticHandler("img/glyphicons-halflings-white.png"));
-
-
 
 fu.get("/who", function (req, res) {
   var nicks = [];
