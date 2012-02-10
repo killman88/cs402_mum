@@ -571,8 +571,11 @@ $(document).ready(function() {
     return false;
   });
 
-  // Try sending an email to 
+  /* ----------------
+    Email feature
+  -------------------*/
   $("#emailButton").click(function () {
+    alert('clic!');
     showEmailLoad();
     console.log("BUTTON PRESSED");
     //showLoad();
@@ -596,8 +599,8 @@ $(document).ready(function() {
         , success: function () {
             showEmailLoaded();
             console.log("Sent that suckkka");
-            $("#theOverlay").trigger('bazingaOverlay:close');
-            $("#loading").hide();
+            //$("#theOverlay").trigger('bazingaOverlay:close');
+            //$("#loading").hide();
         }
     });
     return false;

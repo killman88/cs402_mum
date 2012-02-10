@@ -449,9 +449,9 @@ function showChat (nick) {
 //we want to show a count of unread messages when the window does not have focus
 function updateTitle(){
   if (CONFIG.unread) {
-    document.title = "(" + CONFIG.unread.toString() + ") The 401";
+    document.title = "(" + CONFIG.unread.toString() + ") The 402";
   } else {
-    document.title = "The 401";
+    document.title = "The 402";
   }
 }
 
@@ -571,7 +571,9 @@ $(document).ready(function() {
     return false;
   });
 
-  // Try sending an email to 
+  /* ----------------
+    Email feature
+  -------------------*/
   $("#emailButton").click(function () {
     showEmailLoad();
     console.log("BUTTON PRESSED");
@@ -596,8 +598,8 @@ $(document).ready(function() {
         , success: function () {
             showEmailLoaded();
             console.log("Sent that suckkka");
-            $("#theOverlay").trigger('bazingaOverlay:close');
-            $("#loading").hide();
+            //$("#theOverlay").trigger('bazingaOverlay:close');
+            //$("#loading").hide();
         }
     });
     return false;
