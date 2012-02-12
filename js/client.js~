@@ -192,8 +192,12 @@ util = {
 Scroll function for you 
 --------------------------*/
 function scrollDown () {
-  $('#log').attr('scrollTop', $('#log').attr('scrollHeight'));
-  $("#entry").focus();
+ //$('#log').attr('scrollTop', $('#log').attr('scrollHeight'));
+ //$("#entry").focus();
+ 
+ if($("#log table:last").attr('id') != null){
+ 	$(#log).prop('scrollTop',$('#log').prop('scrollHeight'));
+ }
 }
 
 //inserts an event into the stream for display
@@ -595,7 +599,6 @@ $(document).ready(function() {
            $("#mail-error").css("display","none");
           }
         , success: function () {
-            //showEmailLoaded();
             console.log("Sent that suckkka");
  	    $("#mail-success").show();
         }

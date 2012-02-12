@@ -192,8 +192,12 @@ util = {
 Scroll function for you 
 --------------------------*/
 function scrollDown () {
-  $('#log').attr('scrollTop', $('#log').attr('scrollHeight'));
-  $("#entry").focus();
+ //$('#log').attr('scrollTop', $('#log').attr('scrollHeight'));
+ //$("#entry").focus();
+ 
+ if($("#log table:last").attr('id') != null){
+ 	$('#log').prop('scrollTop',$('#log').prop('scrollHeight'));
+ }
 }
 
 //inserts an event into the stream for display

@@ -65,7 +65,7 @@ ul.right-menu{
 /*-----------
 Chat zone
 -------------*/
-#log{
+#chatzone{
 	margin-top: 6%;
 }
 ::-webkit-scrollbar {
