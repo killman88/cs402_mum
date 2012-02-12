@@ -82,13 +82,19 @@
 			<a class="close" data-dismiss="modal">&#215;</a>
 			<h2>E-mail a friend</h2>
 		</div>
+		<div id="mail-error" class="alert alert-error" style="display:none;">
+			<p>Email not sent: Error while connecting the server!</p>
+		</div>
+		<div id="mail-success" class="alert alert-success" style="display:none;">
+			<p>Mail sent!</p>
+		</div>
 		<div class="modal-body">
 			<form action="#" class="">
 				<div class="input-prepend">
-					<label>Recipient: </label>
+					<label>Sender: </label>
 					<span class="add-on">@</span><input type="text" class="span3" name="toInput" id="toInput" value="" />
 				</div>
-				<label>Sender: </label>
+				<label>Recipient: </label>
 				<div class="input-prepend">
 					<span class="add-on">@</span><input type="text" class="span3" name="fromInput" id="fromInput" value="" /><br />
 					<textarea id="bodyInput" class="input-xlarge tinymce">Please write your message!</textarea>

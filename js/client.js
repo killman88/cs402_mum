@@ -575,7 +575,6 @@ $(document).ready(function() {
     Email feature
   -------------------*/
   $("#emailButton").click(function () {
-    alert('clic!');
     showEmailLoad();
     console.log("BUTTON PRESSED");
     //showLoad();
@@ -593,14 +592,11 @@ $(document).ready(function() {
         , data: { sender: to, receiver: from, message: body }
         , error: function () {
            console.log("error connecting to server");
-           //showConnect();
-           //showEmailLoaded();
+           $("#mail-error").css("display","none");
           }
         , success: function () {
-            showEmailLoaded();
             console.log("Sent that suckkka");
-            //$("#theOverlay").trigger('bazingaOverlay:close');
-            //$("#loading").hide();
+ 	    $("#mail-success").show();
         }
     });
     return false;
