@@ -538,7 +538,7 @@ $(document).ready(function() {
   $("#usersLink").click(outputUsers);
 
   //try joining the chat when the user clicks the connect button
-  $("#connectButton").click(function () {
+  $("#login").on("submit", function () {
     //lock the UI while waiting for a response
     showLoad();
     var nick = $("#nickInput").attr("value");
