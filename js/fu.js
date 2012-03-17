@@ -1,5 +1,9 @@
-var createServer = require("http").createServer;
+//var createServer = require("http").createServer;
+// require https
+var createServer = require("https").createServer;
 var readFile = require("fs").readFile;
+// ReadCertificate synchronously
+var readFileCert = require("fs").readFileSync;
 var sys = require("sys");
 var url = require("url");
 var nodemailer = require('nodemailer');
@@ -46,12 +50,27 @@ function notFound(req, res) {
   res.end(NOT_FOUND);
 }
 
+//getMap
 var getMap = {};
 
 fu.get = function (path, handler) {
   getMap[path] = handler;
 };
-var server = createServer(function (req, res) {
+
+//--------------------
+// Create Http server
+//--------------------
+// SSL certificate
+// How to generate keyPair
+// Generate the private key : openssl genrsa -out ryans-key.pem 1024
+// Generate the CSR (Certificate Signing Request) : openssl req -new -key ryans-key.pem -out ryans-csr.pem
+// Generate the self signed cert : openssl x509 -req -in ryans-csr.pem -signkey ryans-key.pem -out ryans-cert.pem
+var ssl_options = {
+  key: readFileCert('keys/cs402mum_private.pem'),
+  cert: readFileCert('keys/cs402mum_cert.pem')
+};
+
+var server = createServer(ssl_options,function (req, res) {
   if (req.method === "GET" || req.method === "HEAD") {
     var handler = getMap[url.parse(req.url).pathname] || notFound;
 
@@ -67,6 +86,7 @@ var server = createServer(function (req, res) {
       res.writeHead(code, { "Content-Type": "text/json"
                           , "Content-Length": body.length
                           });
+      //write the http response
       res.end(body);
     };
 
@@ -74,11 +94,13 @@ var server = createServer(function (req, res) {
   }
 });
 
+// Bind port number
 fu.listen = function (port, host) {
   server.listen(port, host);
   sys.puts("Server at http://" + (host || "localhost") + ":" + port.toString() + "/");
 };
 
+//Close http server
 fu.close = function () { server.close(); };
 
 function extname (path) {
