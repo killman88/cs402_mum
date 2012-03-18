@@ -628,7 +628,22 @@ $(document).ready(function() {
 
   showConnect();
 });
-
+// Disconnect function
+function userDisconnect(userSession){
+	//jQuery.get("/part", {id: userSession}, function (data) { }, "json");
+	$.ajax({
+		url: '/part',
+		data: {id: userSession},
+		success: function(data){
+				$(".header-menu").hide();
+				$(".chatbox, .chat-field").hide();
+				$("#login").show(); 
+		},
+		dataType: 'json'
+		
+	});
+	
+}
 //if we can, notify the server that we're going away.
 $(window).unload(function () {
   jQuery.get("/part", {id: CONFIG.id}, function (data) { }, "json");
