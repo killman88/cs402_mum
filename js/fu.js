@@ -1,5 +1,6 @@
 //var createServer = require("http").createServer;
 // require https
+//var createServer = require("http").createServer;
 var createServer = require("https").createServer;
 var readFile = require("fs").readFile;
 // ReadCertificate synchronously
@@ -15,7 +16,7 @@ var fu = exports;
 var NOT_FOUND = "Not Found\n";
 
 /* -------------------
- Smtp authentification 
+ Mail: Smtp authentification 
  --------------------*/
 
 nodemailer.SMTP = {

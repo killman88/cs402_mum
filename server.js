@@ -147,9 +147,13 @@ fu.listen(Number(process.env.PORT || PORT), HOST);
 
 fu.get("/", fu.staticHandler("login.html"));
 fu.get("/css/styles.css", fu.staticHandler("css/styles.css"));
+// css file for auth page
+fu.get("/css/styles-auth.css", fu.staticHandler("css/styles-auth.css"));
 fu.get("/css/bootstrap.css", fu.staticHandler("css/bootstrap.css"));
 fu.get("/css/bootstrap-responsive.css", fu.staticHandler("css/bootstrap-responsive.css"));
 fu.get("/js/client.js", fu.staticHandler("js/client.js"));
+// javascript file for auth queries
+fu.get("/js/connect-auth.js", fu.staticHandler("js/connect-auth.js"));
 fu.get("/js/jquery.js", fu.staticHandler("js/jquery.js"));
 fu.get("/js/prettify.js", fu.staticHandler("js/prettify.js"));
 fu.get("/js/bootstrap-dropdown.js", fu.staticHandler("js/bootstrap-dropdown.js"));
